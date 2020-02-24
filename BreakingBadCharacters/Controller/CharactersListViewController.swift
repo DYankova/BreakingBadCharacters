@@ -10,9 +10,9 @@ import UIKit
 import SnapKit
 
 class CharactersListViewController: UIViewController {
-        
-    let fetcher = Fetcher()
 
+    let charsViewModel = CharsViewModel()
+    
     lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
@@ -20,10 +20,10 @@ class CharactersListViewController: UIViewController {
         return cv
     }()
 
-    lazy var searchByNameField = SearchCharField()
+    lazy var searchByNameField = SearchField()
 
-    lazy var searchBySeasonField : SearchCharField = {
-        let field = SearchCharField()
+    lazy var searchBySeasonField : SearchField = {
+        let field = SearchField()
         field.placeholder = "Season"
         return field
     }()
@@ -33,10 +33,10 @@ class CharactersListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        fetcher.fetchAllCharacters { (charModels) in
+        self.charsViewModel.fetchData { () in
             self.collectionView.reloadData()
         }
-        
+      
         view.backgroundColor = Constants.backgroundColor
         addViews()
         setupCV()
@@ -83,17 +83,16 @@ class CharactersListViewController: UIViewController {
             make.trailing.equalTo(searchBySeasonField.snp.leading).offset(-10)
             make.height.equalTo(40)
         }
-        
-       
-            
+     
         collectionView.snp.makeConstraints { make in
             make.leading.equalTo(view.snp.leading)
             make.top.equalTo(searchButton.snp.bottom).offset(20)
             make.trailing.equalTo(view.snp.trailing)
             make.bottom.equalTo(view.snp.bottom)
-     }
+        }
     }
-        
+            //test
+            //move to VM
     @objc private func search(){
 //        itunesFetcher.cleanResults()
 //        let seconds = 1.5
@@ -108,14 +107,13 @@ class CharactersListViewController: UIViewController {
 extension CharactersListViewController:  UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return fetcher.charModels.count
+        return charsViewModel.charViewModels.count
     }
     
    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CharacterCell", for: indexPath) as! CharacterCell
-        cell.textLabel.text = fetcher.charModels[indexPath.item].name
-        cell.imageView.image = fetcher.charModels[indexPath.item].imageView.image
-
+        cell.textLabel.text = charsViewModel.charViewModels[indexPath.item].name
+        cell.imageView.image = charsViewModel.charViewModels[indexPath.item].imageView.image
         return cell
     }
     
@@ -127,7 +125,7 @@ extension CharactersListViewController:  UICollectionViewDelegate, UICollectionV
    }
            
    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let currentItemViewModel =  fetcher.charModels[indexPath.item]
+        let currentItemViewModel =  charsViewModel.charViewModels[indexPath.item]
         let detailsViewController =  DetailsViewController()
         detailsViewController.characterViewModel = currentItemViewModel
         detailsViewController.modalPresentationStyle = .fullScreen

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SearchCharField: UITextField {
+class SearchField: UITextField {
 
 override init(frame: CGRect) {
         super.init(frame: frame)
@@ -21,7 +21,7 @@ override init(frame: CGRect) {
     
     let padding = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 5)
       
-    func setup(){
+    private func setup(){
         placeholder = "Search in Characters"
         layer.borderWidth = 1
         layer.borderColor = UIColor.lightGray.cgColor
