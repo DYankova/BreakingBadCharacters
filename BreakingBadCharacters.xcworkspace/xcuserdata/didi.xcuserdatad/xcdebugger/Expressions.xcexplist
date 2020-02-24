@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "closure #1 in CharacterViewModel.setImage():CharacterViewModel.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "response">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in closure #1 in Fetcher.fetchAllRooms(completion:):Fetcher.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "rooms">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in Fetcher.fetchAllcharacters(completion:):Fetcher.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "charModel">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in CharacterViewModel.setImage(url:):CharacterViewModel.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.imageView.image">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "CharactersListViewController.collectionView(_:numberOfItemsInSection:):CharactersListViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "fetcher.charModels.count">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "CharactersListViewController.collectionView(_:cellForItemAt:):CharactersListViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "fetcher.charModels[indexPath.item].imageView">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in Fetcher.fetchAllRooms(completion:):Fetcher.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "response.result">
+            </PersistentString>
+            <PersistentString
+               value = "response.result.value as? [[String: Any]] ">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "CharactersListViewController.setImage():CharactersListViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "CharacterViewModel.init(_:):CharacterViewModel.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "model.imageUrl">
+            </PersistentString>
+            <PersistentString
+               value = "URL(string: model.imageUrl)!">
+            </PersistentString>
+            <PersistentString
+               value = "imageUrl">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in closure #1 in Fetcher.fetchAllcharacters(completion:):Fetcher.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "CharacterViewModel(CharacterModel(charModel)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "CharacterViewModel.setImage(url:):CharacterViewModel.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "response">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "CharacterViewModel.setImage():CharacterViewModel.swift">
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
