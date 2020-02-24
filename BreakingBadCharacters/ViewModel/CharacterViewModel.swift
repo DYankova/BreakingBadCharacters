@@ -23,8 +23,7 @@ class CharacterViewModel {
     init(_ model: CharacterModel) {
         self.model = model
         self.imageView.af_setImage(withURL: imageUrl)
-        
-        
+   
     }
     
     var name: String {
@@ -46,8 +45,5 @@ class CharacterViewModel {
     var seasons: [Int] {
         return model.seasons
     }
-    
-    func setImage(){
-        self.imageView.loadImage(urlString: model.imageUrl)
-    }
+  
 }

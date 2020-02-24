@@ -11,7 +11,7 @@ import UIKit
 class CharactersListViewController: UIViewController {
         
     let fetcher = Fetcher()
-//    var charModels = [CharacterViewModel]()
+
     
     lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -28,7 +28,7 @@ class CharactersListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        fetcher.fetchAllcharacters { (charModels) in
+        fetcher.fetchAllCharacters { (charModels) in
             self.collectionView.reloadData()
         }
         view.backgroundColor = .white

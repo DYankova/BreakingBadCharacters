@@ -65,6 +65,14 @@
          contextName = "CharactersListViewController.setImage():CharactersListViewController.swift">
       </ContextState>
       <ContextState
+         contextName = "CustomImageView.loadImage(urlString:):CustomImageView.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "imageURL">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "CharacterViewModel.init(_:):CharacterViewModel.swift">
          <PersistentStrings>
             <PersistentString

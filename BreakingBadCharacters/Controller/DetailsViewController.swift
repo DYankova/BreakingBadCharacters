@@ -81,31 +81,55 @@ class DetailsViewController: UIViewController {
         view.addSubview(closeButton)
         view.addSubview(imageView)
         view.addSubview(nameLabel)
-//        view.addSubview(occupationLabel)
-//        view.addSubview(statusLabel)
-//        view.addSubview(nicknameLabel)
-//        view.addSubview(seasonsLabel)
+        view.addSubview(occupationLabel)
+        view.addSubview(statusLabel)
+        view.addSubview(nicknameLabel)
+        view.addSubview(seasonsLabel)
     }
 
     private func addConstraints(){
         closeButton.snp.makeConstraints { make in
-            make.leading.top.equalToSuperview().offset(Constants.padding)
-//            make.top.equalTo(lblQuestion.snp.bottom).offset(16)
+            make.leading.top.equalToSuperview().offset(40)
             make.height.width.equalTo(25)
         }
         
         imageView.snp.makeConstraints { make in
             make.leading.equalTo(closeButton.snp.trailing)
             make.top.equalTo(closeButton.snp.bottom).offset(Constants.padding)
-            make.height.width.equalTo(100)
+            make.height.equalTo(120)
+            make.width.equalTo(100)
         }
         
         nameLabel.snp.makeConstraints { make in
-            make.leading.equalTo(imageView.snp.trailing)
-            make.top.equalTo(closeButton.snp.bottom).offset(Constants.padding)
-            make.height.equalTo(80)
-//             make.trailing.equalTo(closeButton.snp.bottom).offset(Constants.padding)
+            make.leading.equalTo(imageView.snp.trailing).offset(Constants.padding)
+            make.bottom.equalTo(imageView.snp.bottom).offset(Constants.padding)
+            make.height.equalTo(Constants.padding)
         }
+        
+        occupationLabel.snp.makeConstraints { make in
+           make.leading.equalTo(imageView.snp.leading)
+           make.top.equalTo(imageView.snp.bottom).offset(Constants.padding)
+           make.height.equalTo(Constants.padding)
+        }
+        
+        statusLabel.snp.makeConstraints { make in
+          make.leading.equalTo(occupationLabel.snp.leading)
+          make.top.equalTo(occupationLabel.snp.bottom).offset(Constants.padding)
+          make.height.equalTo(Constants.padding)
+        }
+        
+        nicknameLabel.snp.makeConstraints { make in
+            make.leading.equalTo(statusLabel.snp.leading)
+            make.top.equalTo(statusLabel.snp.bottom).offset(Constants.padding)
+            make.height.equalTo(Constants.padding)
+        }
+        
+        seasonsLabel.snp.makeConstraints { make in
+            make.leading.equalTo(nicknameLabel.snp.leading)
+            make.top.equalTo(nicknameLabel.snp.bottom).offset(Constants.padding)
+            make.height.equalTo(Constants.padding)
+        }
+        
     }
     
     @objc private func close() {

@@ -14,17 +14,17 @@ class Fetcher {
    let basicURL = "https://breakingbadapi.com/api/characters"
    var charModels = [CharacterViewModel]()
     
- func fetchAllcharacters(completion: @escaping ([CharacterViewModel]?) -> Void) {
-   guard let url = URL(string: basicURL) else {
-     completion(nil)
-     return
-    }
+ func fetchAllCharacters(completion: @escaping ([CharacterViewModel]?) -> Void) {
+       guard let url = URL(string: basicURL) else {
+         completion(nil)
+         return
+        }
    
-   Alamofire.request(url,
-                     method: .get,
-                     parameters: ["include_docs": "true"])
-   .validate()
-   .responseJSON { response in
+       Alamofire.request(url,
+                         method: .get,
+                         parameters: ["include_docs": "true"])
+       .validate()
+       .responseJSON { response in
          guard response.result.isSuccess else {
            completion(nil)
            return
@@ -35,15 +35,14 @@ class Fetcher {
         }
         
         self.charModels = values.compactMap { charModel in  let md = CharacterViewModel(CharacterModel(charModel))
-            md.setImage()
+//            md.setImage()
             return md
     }
-    self.getImages()
-    DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-        completion(self.charModels)
+        self.getImages()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+            completion(self.charModels)
+        }
     }
-  }
-
  }
 
     func getImages(){

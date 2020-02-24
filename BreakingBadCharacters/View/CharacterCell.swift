@@ -21,9 +21,9 @@ class CharacterCell:  UICollectionViewCell {
         
     lazy var imageView: CustomImageView = {
         let iv = CustomImageView()
-//        if let image = UIImage(named: "download") {
-//            iv.image = image
-//        }
+        if let image = UIImage(named: "close") {
+            iv.image = image
+        }
         iv.translatesAutoresizingMaskIntoConstraints = false
         return iv
     }()
