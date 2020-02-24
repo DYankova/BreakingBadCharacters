@@ -20,8 +20,14 @@ class CharactersListViewController: UIViewController {
         return cv
     }()
 
-    lazy var searchTextField = SearchCharField()
+    lazy var searchByNameField = SearchCharField()
 
+    lazy var searchBySeasonField : SearchCharField = {
+        let field = SearchCharField()
+        field.placeholder = "Season"
+        return field
+    }()
+    
     lazy var searchButton = SearchButton()
   
     override func viewDidLoad() {
@@ -43,9 +49,10 @@ class CharactersListViewController: UIViewController {
     }
     
     private func addViews(){
-       view.addSubview(searchTextField)
-       view.addSubview(searchButton)
-       view.addSubview(collectionView)
+        view.addSubview(searchByNameField)
+        view.addSubview(searchBySeasonField)
+        view.addSubview(searchButton)
+        view.addSubview(collectionView)
     }
    
     private func setupCV(){
@@ -56,20 +63,28 @@ class CharactersListViewController: UIViewController {
     }
     
     private func addConstraints() {
-        
         searchButton.snp.makeConstraints { make in
             make.top.equalTo(view.snp.top).offset(60)
             make.trailing.equalTo(view.snp.trailing).offset(-Constants.padding)
             make.height.equalTo(40)
-            make.width.equalTo(70)
+            make.width.equalTo(50)
         }
         
-        searchTextField.snp.makeConstraints { make in
+        searchBySeasonField.snp.makeConstraints { make in
+            make.trailing.equalTo(searchButton.snp.leading).offset(-10)
+            make.top.equalTo(searchButton.snp.top)
+            make.height.equalTo(40)
+            make.width.equalTo(60)
+        }
+        
+        searchByNameField.snp.makeConstraints { make in
             make.leading.equalTo(view.snp.leading).offset(20)
             make.top.equalTo(searchButton.snp.top)
-            make.trailing.equalTo(searchButton.snp.leading).offset(-Constants.padding)
+            make.trailing.equalTo(searchBySeasonField.snp.leading).offset(-10)
             make.height.equalTo(40)
         }
+        
+       
             
         collectionView.snp.makeConstraints { make in
             make.leading.equalTo(view.snp.leading)

@@ -98,7 +98,7 @@ class DetailsViewController: UIViewController {
             make.leading.equalTo(closeButton.snp.trailing)
             make.top.equalTo(closeButton.snp.bottom).offset(Constants.padding)
             make.height.equalTo(200)
-            make.width.equalTo(150)
+            make.width.equalTo(170)
         }
         
         nameLabel.snp.makeConstraints { make in
