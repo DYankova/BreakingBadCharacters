@@ -168,7 +168,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "B05C1C99-E1D3-40ED-A431-2AC80AF8D14F"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BreakingBadCharacters/Services/Fetcher.swift"
@@ -181,7 +181,7 @@
             <Locations>
                <Location
                   uuid = "B05C1C99-E1D3-40ED-A431-2AC80AF8D14F - 49ed689643030f9d"
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "closure #1 (Alamofire.DataResponse&lt;Any&gt;) -&gt; () in BreakingBadCharacters.Fetcher.fetchAllcharacters(completion: (Swift.Optional&lt;Swift.Array&lt;BreakingBadCharacters.CharacterViewModel&gt;&gt;) -&gt; ()) -&gt; ()"
@@ -192,11 +192,11 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "37"
                   endingLineNumber = "37"
-                  offsetFromSymbolStart = "697">
+                  offsetFromSymbolStart = "966">
                </Location>
                <Location
                   uuid = "B05C1C99-E1D3-40ED-A431-2AC80AF8D14F - 4a245565dd46d4bc"
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "closure #1 (Swift.Dictionary&lt;Swift.String, Any&gt;) -&gt; Swift.Optional&lt;BreakingBadCharacters.CharacterViewModel&gt; in closure #1 (Alamofire.DataResponse&lt;Any&gt;) -&gt; () in BreakingBadCharacters.Fetcher.fetchAllcharacters(completion: (Swift.Optional&lt;Swift.Array&lt;BreakingBadCharacters.CharacterViewModel&gt;&gt;) -&gt; ()) -&gt; ()"
@@ -320,8 +320,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "52"
             endingLineNumber = "52"
-            landmarkName = "CharacterViewModel"
-            landmarkType = "3">
+            landmarkName = "setImage()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -352,8 +352,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "26"
             endingLineNumber = "26"
-            landmarkName = "name"
-            landmarkType = "24">
+            landmarkName = "init(_:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -417,6 +417,22 @@
             startingLineNumber = "48"
             endingLineNumber = "48"
             landmarkName = "viewWillAppear(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "12664C08-F144-4546-8406-AA9552C82DF9"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BreakingBadCharacters/Controller/DetailsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "122"
+            endingLineNumber = "122"
+            landmarkName = "close()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

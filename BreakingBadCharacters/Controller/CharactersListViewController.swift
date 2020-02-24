@@ -99,10 +99,9 @@ extension CharactersListViewController:  UICollectionViewDelegate, UICollectionV
    }
            
    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        let currentItemViewModel = itunesFetcher.resultItems[indexPath.item]
+        let currentItemViewModel =  fetcher.charModels[indexPath.item]
         let detailsViewController =  DetailsViewController()
-//        detailsViewController.itunesFetcher = itunesFetcher
-//        detailsViewController.itemViewModel = currentItemViewModel
+        detailsViewController.characterViewModel = currentItemViewModel
         detailsViewController.modalPresentationStyle = .fullScreen
         self.present(detailsViewController, animated: true, completion: nil)
    }

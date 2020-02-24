@@ -21,4 +21,6 @@ struct Constants {
     static let backgroundColor = UIColor.white
     
     static let padding : CGFloat = 20
+    
+//    static let font  = UIFont(name: "Robonto", size: 20)
 }
