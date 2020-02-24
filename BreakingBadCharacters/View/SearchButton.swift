@@ -24,7 +24,6 @@ class SearchButton: UIButton {
         setTitle("Search", for: .normal)
         layer.cornerRadius = 4
         titleLabel?.font = .systemFont(ofSize: 14)
-        translatesAutoresizingMaskIntoConstraints = false
    }
 
 }

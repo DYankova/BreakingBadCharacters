@@ -7,17 +7,16 @@
 //
 
 import UIKit
+import SnapKit
 
 class CharactersListViewController: UIViewController {
         
     let fetcher = Fetcher()
 
-    
     lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        cv.translatesAutoresizingMaskIntoConstraints = false
         return cv
     }()
 
@@ -31,39 +30,53 @@ class CharactersListViewController: UIViewController {
         fetcher.fetchAllCharacters { (charModels) in
             self.collectionView.reloadData()
         }
-        view.backgroundColor = .white
         
-        view.addSubview(searchTextField)
-        view.addSubview(searchButton)
-        view.addSubview(collectionView)
-  
-        collectionView.delegate = self
-        collectionView.dataSource = self
-        collectionView.backgroundColor = .clear
-        collectionView.register(CharacterCell.self, forCellWithReuseIdentifier: "CharacterCell")
-        setupConstraints()
+        view.backgroundColor = Constants.backgroundColor
+        addViews()
+        setupCV()
+        addConstraints()
+        searchButton.addTarget(self, action: #selector(search), for: .touchUpInside)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         collectionView.reloadData()
     }
+    
+    private func addViews(){
+       view.addSubview(searchTextField)
+       view.addSubview(searchButton)
+       view.addSubview(collectionView)
+    }
    
-    private func setupConstraints() {
-        searchButton.topAnchor.constraint(equalTo: view.topAnchor, constant: 60).isActive = true
-        searchButton.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -20).isActive = true
-        searchButton.widthAnchor.constraint(equalToConstant: 70).isActive = true
-        searchButton.heightAnchor.constraint(equalToConstant: 40).isActive = true
-        searchButton.addTarget(self, action: #selector(search), for: .touchUpInside)
-           
-        searchTextField.topAnchor.constraint(equalTo: searchButton.topAnchor).isActive = true
-        searchTextField.rightAnchor.constraint(equalTo: searchButton.leftAnchor, constant: -20).isActive = true
-        searchTextField.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20).isActive = true
-        searchTextField.heightAnchor.constraint(equalToConstant:  40).isActive = true
-       
-        collectionView.topAnchor.constraint(equalTo: searchTextField.bottomAnchor, constant: 20).isActive = true
-        collectionView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
-        collectionView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
-        collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+    private func setupCV(){
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.backgroundColor = .clear
+        collectionView.register(CharacterCell.self, forCellWithReuseIdentifier: "CharacterCell")
+    }
+    
+    private func addConstraints() {
+        
+        searchButton.snp.makeConstraints { make in
+            make.top.equalTo(view.snp.top).offset(60)
+            make.trailing.equalTo(view.snp.trailing).offset(-Constants.padding)
+            make.height.equalTo(40)
+            make.width.equalTo(70)
+        }
+        
+        searchTextField.snp.makeConstraints { make in
+            make.leading.equalTo(view.snp.leading).offset(20)
+            make.top.equalTo(searchButton.snp.top)
+            make.trailing.equalTo(searchButton.snp.leading).offset(-Constants.padding)
+            make.height.equalTo(40)
+        }
+            
+        collectionView.snp.makeConstraints { make in
+            make.leading.equalTo(view.snp.leading)
+            make.top.equalTo(searchButton.snp.bottom).offset(20)
+            make.trailing.equalTo(view.snp.trailing)
+            make.bottom.equalTo(view.snp.bottom)
+     }
     }
         
     @objc private func search(){

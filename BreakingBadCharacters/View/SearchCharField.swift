@@ -28,7 +28,6 @@ override init(frame: CGRect) {
         font = .systemFont(ofSize: 16)
         layer.cornerRadius = 4
         textColor = .black
-        translatesAutoresizingMaskIntoConstraints = false
     }
     
     override open func textRect(forBounds bounds: CGRect) -> CGRect {
