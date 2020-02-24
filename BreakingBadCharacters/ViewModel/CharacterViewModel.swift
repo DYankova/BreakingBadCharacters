@@ -27,23 +27,27 @@ class CharacterViewModel {
     }
     
     var name: String {
-        model.name
-    }
-    
-    var occupation : String {
-        model.occupation
-    }
-    
-    var status: String {
-        model.status
-    }
-    
-    var nickName: String {
-        model.nickName
-    }
+          "Name: \( model.name)"
+       }
+       
+       var occupation : String {
+          "Occupation : \(model.occupation)"
+       }
+       
+       var status: String {
+          "Status : \(model.status)"
+       }
+       
+       var nickName: String {
+          "Nickname : \( model.nickName)"
+       }
 
-    var seasons: [Int] {
-        return model.seasons
-    }
+       var seasons: [Int] {
+           return model.seasons
+       }
+       
+       func getSeasons() -> String {
+           return "Seasons: \(seasons.map{ String($0) })"
+       }
   
 }

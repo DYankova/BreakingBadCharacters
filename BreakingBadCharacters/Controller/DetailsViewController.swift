@@ -75,8 +75,9 @@ class DetailsViewController: UIViewController {
         occupationLabel.text = characterViewModel.occupation
         statusLabel.text = characterViewModel.status
         nicknameLabel.text = characterViewModel.nickName
-        seasonsLabel.text = "(characterViewModel.seasons)"
+        seasonsLabel.text = characterViewModel.getSeasons()
     }
+    
     private func addViews() {
         view.addSubview(closeButton)
         view.addSubview(imageView)
@@ -96,19 +97,19 @@ class DetailsViewController: UIViewController {
         imageView.snp.makeConstraints { make in
             make.leading.equalTo(closeButton.snp.trailing)
             make.top.equalTo(closeButton.snp.bottom).offset(Constants.padding)
-            make.height.equalTo(120)
-            make.width.equalTo(100)
+            make.height.equalTo(200)
+            make.width.equalTo(150)
         }
         
         nameLabel.snp.makeConstraints { make in
-            make.leading.equalTo(imageView.snp.trailing).offset(Constants.padding)
-            make.bottom.equalTo(imageView.snp.bottom).offset(Constants.padding)
+            make.leading.equalTo(imageView.snp.leading)
+            make.top.equalTo(imageView.snp.bottom).offset(Constants.padding)
             make.height.equalTo(Constants.padding)
         }
         
         occupationLabel.snp.makeConstraints { make in
-           make.leading.equalTo(imageView.snp.leading)
-           make.top.equalTo(imageView.snp.bottom).offset(Constants.padding)
+           make.leading.equalTo(nameLabel.snp.leading)
+           make.top.equalTo(nameLabel.snp.bottom).offset(Constants.padding)
            make.height.equalTo(Constants.padding)
         }
         
