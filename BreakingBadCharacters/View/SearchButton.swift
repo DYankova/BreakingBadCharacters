@@ -23,7 +23,7 @@ class SearchButton: UIButton {
         backgroundColor = .darkGray
         setTitle("Search", for: .normal)
         layer.cornerRadius = 4
-        titleLabel?.font = .systemFont(ofSize: 14)
+        titleLabel?.font = .systemFont(ofSize: 13)
    }
 
 }

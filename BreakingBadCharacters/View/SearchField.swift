@@ -25,7 +25,7 @@ override init(frame: CGRect) {
         placeholder = "Search in Characters"
         layer.borderWidth = 1
         layer.borderColor = UIColor.lightGray.cgColor
-        font = .systemFont(ofSize: 14)
+        font = .systemFont(ofSize: 15)
         layer.cornerRadius = 4
         textColor = .black
     }

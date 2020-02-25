@@ -23,31 +23,33 @@ class CharacterViewModel {
     init(_ model: CharacterModel) {
         self.model = model
         self.imageView.af_setImage(withURL: imageUrl)
-   
     }
     
-    var name: String {
-          "Name: \( model.name)"
-       }
-       
-       var occupation : String {
-          "Occupation : \(model.occupation)"
-       }
-       
-       var status: String {
-          "Status : \(model.status)"
-       }
-       
-       var nickName: String {
-          "Nickname : \( model.nickName)"
-       }
+    var name : String {
+        model.name
+    }
+    var nameOfCharacter: String {
+      "Name: \(name)"
+   }
+   
+   var occupation : String {
+      "Occupation : \(model.occupation)"
+   }
+   
+   var status: String {
+      "Status : \(model.status)"
+   }
+   
+   var nickName: String {
+      "Nickname : \( model.nickName)"
+   }
 
-       var seasons: [Int] {
-           return model.seasons
-       }
-       
-       func getSeasons() -> String {
-           return "Seasons: \(seasons.map{ String($0) })"
-       }
+   var seasons: [Int] {
+       return model.seasons
+   }
+   
+    func getSeasons() -> String {
+       return "Seasons: \(seasons.map{ String($0) })"
+   }
   
 }

@@ -44,11 +44,11 @@ class CharacterCell:  UICollectionViewCell {
         imageView.snp.makeConstraints { make in
             make.leading.equalTo(self.snp.leading).offset(Constants.padding)
             make.top.equalTo(self.snp.top).offset(Constants.padding)
-            make.height.width.equalTo(40)
+            make.height.width.equalTo(Constants.cellHeight)
         }
         
         textLabel.snp.makeConstraints { make in
-            make.leading.equalTo(imageView.snp.trailing).offset(10)
+            make.leading.equalTo(imageView.snp.trailing).offset(Constants.paddingSmall)
             make.top.equalTo(self.snp.top).offset(Constants.padding)
             make.trailing.equalTo(self.snp.trailing).offset(-Constants.padding)
         }

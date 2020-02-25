@@ -51,6 +51,17 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "CharactersListViewController.search():CharactersListViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "characters">
+            </PersistentString>
+            <PersistentString
+               value = "characters.filter{$0.name.lowercased().contains(name!.lowercased())}">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "closure #1 in Fetcher.fetchAllRooms(completion:):Fetcher.swift">
          <PersistentStrings>
             <PersistentString

@@ -58,7 +58,6 @@ class DetailsViewController: UIViewController {
         return btn
    }()
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         addViews()
@@ -71,7 +70,7 @@ class DetailsViewController: UIViewController {
     private func setupViews(){
         view.backgroundColor = Constants.backgroundColor
         imageView.image = characterViewModel.imageView.image
-        nameLabel.text = characterViewModel.name
+        nameLabel.text = characterViewModel.nameOfCharacter
         occupationLabel.text = characterViewModel.occupation
         statusLabel.text = characterViewModel.status
         nicknameLabel.text = characterViewModel.nickName
@@ -90,15 +89,15 @@ class DetailsViewController: UIViewController {
 
     private func addConstraints(){
         closeButton.snp.makeConstraints { make in
-            make.leading.top.equalToSuperview().offset(40)
-            make.height.width.equalTo(25)
+            make.leading.top.equalToSuperview().offset(Constants.cellHeight)
+            make.height.width.equalTo(Constants.padding)
         }
         
         imageView.snp.makeConstraints { make in
             make.leading.equalTo(closeButton.snp.trailing)
             make.top.equalTo(closeButton.snp.bottom).offset(Constants.padding)
-            make.height.equalTo(200)
-            make.width.equalTo(170)
+            make.height.equalTo(Constants.imageHeight)
+            make.width.equalTo(Constants.imageWidth)
         }
         
         nameLabel.snp.makeConstraints { make in
@@ -130,7 +129,6 @@ class DetailsViewController: UIViewController {
             make.top.equalTo(nicknameLabel.snp.bottom).offset(Constants.padding)
             make.height.equalTo(Constants.padding)
         }
-        
     }
     
     @objc private func close() {

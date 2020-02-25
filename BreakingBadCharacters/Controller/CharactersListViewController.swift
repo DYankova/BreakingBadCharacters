@@ -12,6 +12,7 @@ import SnapKit
 class CharactersListViewController: UIViewController {
 
     let charsViewModel = CharsViewModel()
+    var characters = [CharacterViewModel]()
     
     lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -25,6 +26,7 @@ class CharactersListViewController: UIViewController {
     lazy var searchBySeasonField : SearchField = {
         let field = SearchField()
         field.placeholder = "Season"
+        field.keyboardType = .numberPad
         return field
     }()
     
@@ -34,6 +36,7 @@ class CharactersListViewController: UIViewController {
         super.viewDidLoad()
         
         self.charsViewModel.fetchData { () in
+            self.characters = self.charsViewModel.charViewModels
             self.collectionView.reloadData()
         }
       
@@ -64,29 +67,29 @@ class CharactersListViewController: UIViewController {
     
     private func addConstraints() {
         searchButton.snp.makeConstraints { make in
-            make.top.equalTo(view.snp.top).offset(60)
+            make.top.equalTo(view.snp.top).offset(Constants.searchWidth)
             make.trailing.equalTo(view.snp.trailing).offset(-Constants.padding)
-            make.height.equalTo(40)
-            make.width.equalTo(50)
+            make.height.equalTo(Constants.cellHeight)
+            make.width.equalTo(Constants.searchWidth)
         }
         
         searchBySeasonField.snp.makeConstraints { make in
-            make.trailing.equalTo(searchButton.snp.leading).offset(-10)
+            make.trailing.equalTo(searchButton.snp.leading).offset(-Constants.paddingSmall)
             make.top.equalTo(searchButton.snp.top)
-            make.height.equalTo(40)
-            make.width.equalTo(60)
+            make.height.equalTo(Constants.cellHeight)
+            make.width.equalTo(Constants.searchWidth)
         }
         
         searchByNameField.snp.makeConstraints { make in
-            make.leading.equalTo(view.snp.leading).offset(20)
+            make.leading.equalTo(view.snp.leading).offset(Constants.padding)
             make.top.equalTo(searchButton.snp.top)
-            make.trailing.equalTo(searchBySeasonField.snp.leading).offset(-10)
-            make.height.equalTo(40)
+            make.trailing.equalTo(searchBySeasonField.snp.leading).offset(-Constants.paddingSmall)
+            make.height.equalTo(Constants.cellHeight)
         }
      
         collectionView.snp.makeConstraints { make in
             make.leading.equalTo(view.snp.leading)
-            make.top.equalTo(searchButton.snp.bottom).offset(20)
+            make.top.equalTo(searchButton.snp.bottom).offset(Constants.padding)
             make.trailing.equalTo(view.snp.trailing)
             make.bottom.equalTo(view.snp.bottom)
         }
@@ -94,26 +97,56 @@ class CharactersListViewController: UIViewController {
             //test
             //move to VM
     @objc private func search(){
-//        itunesFetcher.cleanResults()
-//        let seconds = 1.5
-//            self.itunesFetcher.getItems(symbol: self.searchTextField.text ?? "")
-//            DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
-//                self.collectionView.reloadData()
-//        }
+        var season = 0
+        guard let name = searchByNameField.text else { return  }
+        guard let seasonText = searchBySeasonField.text else { return  }
+        season = Int(seasonText) ?? 0
+        
+        cleanResults()
+        if name != "" {
+ 
+            self.filterByName(name)
+        }
+        if seasonText != "" {
+             filterBySeason(season)
+         }
+
+         self.collectionView.reloadData()
+        
+    }
+    
+    func filterByName(_ name: String){
+        characters = characters.filter{ $0.name.lowercased().contains(name.lowercased())}
+    }
+        
+    func filterBySeason(_ season: Int){
+        characters = characters.filter{ $0.seasons.contains(season)}
+   }
+//
+    func cleanResults(){
+        self.characters = self.charsViewModel.charViewModels
     }
     
 }
 
+//        if let foundChar = charsViewModel.charViewModels.first(where: {$0.name.lowercased().contains(name!.lowercased())}){
+//            cleanResults()
+//            characters.append(foundChar)
+//
+//        } else {
+//            self.characters = self.charsViewModel.charViewModels
+//        }
+
 extension CharactersListViewController:  UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return charsViewModel.charViewModels.count
+        return characters.count
     }
     
    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CharacterCell", for: indexPath) as! CharacterCell
-        cell.textLabel.text = charsViewModel.charViewModels[indexPath.item].name
-        cell.imageView.image = charsViewModel.charViewModels[indexPath.item].imageView.image
+        cell.textLabel.text = characters[indexPath.item].name
+        cell.imageView.image = characters[indexPath.item].imageView.image
         return cell
     }
     
