@@ -12,7 +12,7 @@ import SnapKit
 class CharactersListViewController: UIViewController {
 
     let charsViewModel = CharsViewModel()
-    var characters = [CharacterViewModel]()
+//    var characters = [CharacterViewModel]()
     
     lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -36,7 +36,7 @@ class CharactersListViewController: UIViewController {
         super.viewDidLoad()
         
         self.charsViewModel.fetchData { () in
-            self.characters = self.charsViewModel.charViewModels
+//            self.characters = self.charsViewModel.charViewModels
             self.collectionView.reloadData()
         }
       
@@ -97,56 +97,25 @@ class CharactersListViewController: UIViewController {
             //test
             //move to VM
     @objc private func search(){
-        var season = 0
+
         guard let name = searchByNameField.text else { return  }
         guard let seasonText = searchBySeasonField.text else { return  }
-        season = Int(seasonText) ?? 0
+        charsViewModel.searchCharacters(name, seasonText)
         
-        cleanResults()
-        if name != "" {
- 
-            self.filterByName(name)
-        }
-        if seasonText != "" {
-             filterBySeason(season)
-         }
-
          self.collectionView.reloadData()
-        
+
     }
-    
-    func filterByName(_ name: String){
-        characters = characters.filter{ $0.name.lowercased().contains(name.lowercased())}
-    }
-        
-    func filterBySeason(_ season: Int){
-        characters = characters.filter{ $0.seasons.contains(season)}
-   }
-//
-    func cleanResults(){
-        self.characters = self.charsViewModel.charViewModels
-    }
-    
 }
-
-//        if let foundChar = charsViewModel.charViewModels.first(where: {$0.name.lowercased().contains(name!.lowercased())}){
-//            cleanResults()
-//            characters.append(foundChar)
-//
-//        } else {
-//            self.characters = self.charsViewModel.charViewModels
-//        }
-
 extension CharactersListViewController:  UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return characters.count
+        return charsViewModel.currentCharViewModels.count
     }
     
    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CharacterCell", for: indexPath) as! CharacterCell
-        cell.textLabel.text = characters[indexPath.item].name
-        cell.imageView.image = characters[indexPath.item].imageView.image
+        cell.textLabel.text = charsViewModel.currentCharViewModels[indexPath.item].name
+        cell.imageView.image = charsViewModel.currentCharViewModels[indexPath.item].imageView.image
         return cell
     }
     
@@ -158,7 +127,7 @@ extension CharactersListViewController:  UICollectionViewDelegate, UICollectionV
    }
            
    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let currentItemViewModel =  charsViewModel.charViewModels[indexPath.item]
+        let currentItemViewModel =  charsViewModel.currentCharViewModels[indexPath.item]
         let detailsViewController =  DetailsViewController()
         detailsViewController.characterViewModel = currentItemViewModel
         detailsViewController.modalPresentationStyle = .fullScreen

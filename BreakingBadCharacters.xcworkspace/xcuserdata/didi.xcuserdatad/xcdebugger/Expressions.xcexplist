@@ -38,7 +38,7 @@
          contextName = "CharactersListViewController.collectionView(_:numberOfItemsInSection:):CharactersListViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "fetcher.charModels.count">
+               value = "charsViewModel.currentCharViewModels.count">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -58,6 +58,14 @@
             </PersistentString>
             <PersistentString
                value = "characters.filter{$0.name.lowercased().contains(name!.lowercased())}">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "CharsViewModel.cleanResults():CharsViewModel.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "fetchedCharViewModels">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -84,6 +92,14 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "CharsViewModel.filterByName(_:):CharsViewModel.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "fetchedCharViewModels.filter { $0.name.lowercased().contains(name.lowercased())}">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "CharacterViewModel.init(_:):CharacterViewModel.swift">
          <PersistentStrings>
             <PersistentString
@@ -102,6 +118,14 @@
          <PersistentStrings>
             <PersistentString
                value = "CharacterViewModel(CharacterModel(charModel)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "CharsViewModel.searchCharacters(_:_:):CharsViewModel.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "currentCharViewModels">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
