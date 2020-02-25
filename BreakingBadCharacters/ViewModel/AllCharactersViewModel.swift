@@ -25,7 +25,7 @@ class AllCharactersViewModel {
     }
     
     func searchCharacters(_ name: String, _ seasonText: String){
-        filteredCharViewModels = filter.cleanResults(filteredCharViewModels, fetchedCharViewModels)
+        filteredCharViewModels = fetchedCharViewModels
         let season = Int(seasonText) ?? 0
             
         if name != "" {

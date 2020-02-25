@@ -21,11 +21,5 @@ class Filter {
         list = list.filter{ $0.seasons.contains(season)}
         return list
     }
-      
-    func cleanResults(_ filteredList: [CharacterViewModel], _ cleanList: [CharacterViewModel]) -> [CharacterViewModel]{
-        var filteredList = filteredList
-        filteredList = cleanList
-        return filteredList
-    }
 
 }
