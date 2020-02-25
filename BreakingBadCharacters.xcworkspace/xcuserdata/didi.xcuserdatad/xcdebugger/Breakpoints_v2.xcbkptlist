@@ -622,8 +622,8 @@
             filePath = "BreakingBadCharactersTests/CharsViewModelTest.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
             landmarkName = "testfilterByNameNotContains()"
             landmarkType = "7">
          </BreakpointContent>
@@ -648,7 +648,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "AE972DEE-9D7E-48CC-8EFB-951559C155D6"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BreakingBadCharacters/Services/Filter.swift"
@@ -664,7 +664,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "72E6A93F-EFE9-4C55-B367-544FCD4815ED"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BreakingBadCharacters/Services/Filter.swift"
@@ -676,33 +676,33 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "72E6A93F-EFE9-4C55-B367-544FCD4815ED - 19bdb1b3531fcb92"
-                  shouldBeEnabled = "Yes"
+                  uuid = "72E6A93F-EFE9-4C55-B367-544FCD4815ED - 1eafa35a508308a0"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "BreakingBadCharacters.Filter.filterBySeason(Swift.Int, Swift.Array&lt;BreakingBadCharacters.CharacterViewModel&gt;) -&gt; ()"
+                  symbolName = "BreakingBadCharacters.Filter.filterBySeason(Swift.Int, Swift.Array&lt;BreakingBadCharacters.CharacterViewModel&gt;) -&gt; Swift.Array&lt;BreakingBadCharacters.CharacterViewModel&gt;"
                   moduleName = "BreakingBadCharacters"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/didi/projects/BreakingBadCharacters/BreakingBadCharacters/Services/Filter.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "20"
-                  endingLineNumber = "20"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
                   offsetFromSymbolStart = "110">
                </Location>
                <Location
-                  uuid = "72E6A93F-EFE9-4C55-B367-544FCD4815ED - 56b45f45a7d8e055"
-                  shouldBeEnabled = "Yes"
+                  uuid = "72E6A93F-EFE9-4C55-B367-544FCD4815ED - db7846b27069e538"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (BreakingBadCharacters.CharacterViewModel) -&gt; Swift.Bool in BreakingBadCharacters.Filter.filterBySeason(Swift.Int, Swift.Array&lt;BreakingBadCharacters.CharacterViewModel&gt;) -&gt; ()"
+                  symbolName = "closure #1 (BreakingBadCharacters.CharacterViewModel) -&gt; Swift.Bool in BreakingBadCharacters.Filter.filterBySeason(Swift.Int, Swift.Array&lt;BreakingBadCharacters.CharacterViewModel&gt;) -&gt; Swift.Array&lt;BreakingBadCharacters.CharacterViewModel&gt;"
                   moduleName = "BreakingBadCharacters"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/didi/projects/BreakingBadCharacters/BreakingBadCharacters/Services/Filter.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "20"
-                  endingLineNumber = "20"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
                   offsetFromSymbolStart = "34">
                </Location>
             </Locations>
@@ -712,7 +712,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "7DC1C95E-115F-4D01-932F-DECF467E0AEB"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BreakingBadCharacters/Services/Filter.swift"
@@ -724,11 +724,11 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "7DC1C95E-115F-4D01-932F-DECF467E0AEB - 79e6933c62d0d15a"
-                  shouldBeEnabled = "Yes"
+                  uuid = "7DC1C95E-115F-4D01-932F-DECF467E0AEB - ed86ce524da093cb"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "BreakingBadCharacters.Filter.filterByName(Swift.String, Swift.Array&lt;BreakingBadCharacters.CharacterViewModel&gt;) -&gt; ()"
+                  symbolName = "BreakingBadCharacters.Filter.filterByName(Swift.String, Swift.Array&lt;BreakingBadCharacters.CharacterViewModel&gt;) -&gt; Swift.Array&lt;BreakingBadCharacters.CharacterViewModel&gt;"
                   moduleName = "BreakingBadCharacters"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/didi/projects/BreakingBadCharacters/BreakingBadCharacters/Services/Filter.swift"
@@ -739,11 +739,11 @@
                   offsetFromSymbolStart = "121">
                </Location>
                <Location
-                  uuid = "7DC1C95E-115F-4D01-932F-DECF467E0AEB - d9139a43e3f8a051"
-                  shouldBeEnabled = "Yes"
+                  uuid = "7DC1C95E-115F-4D01-932F-DECF467E0AEB - 8cb5a3b33c8faa31"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (BreakingBadCharacters.CharacterViewModel) -&gt; Swift.Bool in BreakingBadCharacters.Filter.filterByName(Swift.String, Swift.Array&lt;BreakingBadCharacters.CharacterViewModel&gt;) -&gt; ()"
+                  symbolName = "closure #1 (BreakingBadCharacters.CharacterViewModel) -&gt; Swift.Bool in BreakingBadCharacters.Filter.filterByName(Swift.String, Swift.Array&lt;BreakingBadCharacters.CharacterViewModel&gt;) -&gt; Swift.Array&lt;BreakingBadCharacters.CharacterViewModel&gt;"
                   moduleName = "BreakingBadCharacters"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/didi/projects/BreakingBadCharacters/BreakingBadCharacters/Services/Filter.swift"
@@ -769,6 +769,22 @@
             startingLineNumber = "35"
             endingLineNumber = "35"
             landmarkName = "searchCharacters(_:_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5E1BA132-6211-4D2E-8F97-8C3EDE1B1CD4"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BreakingBadCharactersTests/CharsViewModelTest.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "testfilterByNameContains()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

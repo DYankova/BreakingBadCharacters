@@ -32,33 +32,27 @@ class CharsViewModelTest: XCTestCase {
     }
 
     func testfilterByNameContains(){
-        filter.filterByName("Monica", charsViewModel.filteredCharViewModels )
-        XCTAssertEqual(charsViewModel.filteredCharViewModels, [testCharVMTwo])
+        XCTAssertEqual(filter.filterByName("Monica", charsViewModel.filteredCharViewModels), [testCharVMTwo])
     }
     
     func testfilterByNameNotContains(){
-        filter.filterByName("Di", charsViewModel.filteredCharViewModels)
-        XCTAssertTrue(charsViewModel.filteredCharViewModels.count == 0)
+        XCTAssertTrue(filter.filterByName("Di", charsViewModel.filteredCharViewModels).count == 0)
     }
     
     func testfilterByNameEmpty(){
-        filter.filterByName("", charsViewModel.filteredCharViewModels)
-        XCTAssertTrue(charsViewModel.filteredCharViewModels.count == 0)
+        XCTAssertTrue(filter.filterByName("", charsViewModel.filteredCharViewModels).count == 0)
     }
     
     func testfilterByNameContainsMany(){
-        filter.filterByName("e", charsViewModel.filteredCharViewModels)
-        XCTAssertEqual(charsViewModel.filteredCharViewModels, [testCharVMOne, testCharVMThree])
+        XCTAssertEqual(filter.filterByName("e", charsViewModel.filteredCharViewModels), [testCharVMOne, testCharVMThree])
     }
     
     func testfilterBySeasonContains(){
-        filter.filterBySeason(3, charsViewModel.filteredCharViewModels)
-        XCTAssertEqual(charsViewModel.filteredCharViewModels, [testCharVMOne, testCharVMThree])
+        XCTAssertEqual(filter.filterBySeason(3, charsViewModel.filteredCharViewModels), [testCharVMOne, testCharVMThree])
     }
     
     func testfilterBySeasonNotContains(){
-        filter.filterBySeason(7, charsViewModel.filteredCharViewModels)
-        XCTAssertTrue(charsViewModel.filteredCharViewModels.count == 0)
+        XCTAssertTrue(filter.filterBySeason(7, charsViewModel.filteredCharViewModels).count == 0)
     }
     
 }
