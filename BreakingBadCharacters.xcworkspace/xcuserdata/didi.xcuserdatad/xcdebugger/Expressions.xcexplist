@@ -3,6 +3,14 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "CharsViewModelTest.testfilterByNameNotContains():CharsViewModelTest.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "charsViewModel.currentCharViewModels">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "closure #1 in CharacterViewModel.setImage():CharacterViewModel.swift">
          <PersistentStrings>
             <PersistentString

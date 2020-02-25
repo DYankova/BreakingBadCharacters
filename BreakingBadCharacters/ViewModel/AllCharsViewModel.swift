@@ -33,15 +33,15 @@ class AllCharsViewModel {
            filterBySeason(season)
         }
     }
-         //test
-    private func filterByName(_ name: String){
+         
+    func filterByName(_ name: String){
         currentCharViewModels = currentCharViewModels.filter { $0.name.lowercased().contains(name.lowercased())}
     }
-        //test
-    private func filterBySeason(_ season: Int){
+    
+    func filterBySeason(_ season: Int){
         currentCharViewModels = currentCharViewModels.filter{ $0.seasons.contains(season)}
     }
-        //test
+        
     private func cleanResults(){
         currentCharViewModels = fetchedCharViewModels
     }

@@ -10,7 +10,8 @@ import UIKit
 import AlamofireImage
 import Alamofire
 
-struct CharacterViewModel {
+struct CharacterViewModel : Equatable {
+   
     let model: CharacterModel
     var imageView = CustomImageView()
     
@@ -26,6 +27,7 @@ struct CharacterViewModel {
     var name : String {
         model.name
     }
+    
     var nameOfCharacter: String {
       "Name: \(name)"
     }
@@ -49,5 +51,9 @@ struct CharacterViewModel {
     func getSeasons() -> String {
       return "Seasons: \(seasons.map{ String($0) })"
     }
-  
+    
+    static func == (lhs: CharacterViewModel, rhs: CharacterViewModel) -> Bool {
+          return lhs.name == rhs.name
+     }
+     
 }

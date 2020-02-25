@@ -11,7 +11,7 @@ import SnapKit
 
 class CharactersListViewController: UIViewController {
 
-    let charsViewModel = CharsViewModel()
+    let charsViewModel = AllCharsViewModel()
     
     lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
