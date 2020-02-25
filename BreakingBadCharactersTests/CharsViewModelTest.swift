@@ -22,9 +22,9 @@ class CharsViewModelTest: XCTestCase {
     
     override func setUp() {
         charsViewModel = AllCharactersViewModel()
-        charsViewModel.filteredCharViewModels.append(testCharVMOne)
-        charsViewModel.filteredCharViewModels.append(testCharVMTwo)
-        charsViewModel.filteredCharViewModels.append(testCharVMThree)
+        charsViewModel.fetchedCharactersViewModels.append(testCharVMOne)
+        charsViewModel.fetchedCharactersViewModels.append(testCharVMTwo)
+        charsViewModel.fetchedCharactersViewModels.append(testCharVMThree)
     }
 
     override func tearDown() {
@@ -32,27 +32,27 @@ class CharsViewModelTest: XCTestCase {
     }
 
     func testfilterByNameContains(){
-        XCTAssertEqual(filter.filterByName("Monica", charsViewModel.filteredCharViewModels), [testCharVMTwo])
+        XCTAssertEqual(filter.filterByName("Monica", charsViewModel.fetchedCharactersViewModels), [testCharVMTwo])
     }
     
     func testfilterByNameNotContains(){
-        XCTAssertTrue(filter.filterByName("Di", charsViewModel.filteredCharViewModels).count == 0)
+        XCTAssertTrue(filter.filterByName("Di", charsViewModel.fetchedCharactersViewModels).count == 0)
     }
     
     func testfilterByNameEmpty(){
-        XCTAssertTrue(filter.filterByName("", charsViewModel.filteredCharViewModels).count == 0)
+        XCTAssertTrue(filter.filterByName("", charsViewModel.fetchedCharactersViewModels).count == 0)
     }
     
     func testfilterByNameContainsMany(){
-        XCTAssertEqual(filter.filterByName("e", charsViewModel.filteredCharViewModels), [testCharVMOne, testCharVMThree])
+        XCTAssertEqual(filter.filterByName("e", charsViewModel.fetchedCharactersViewModels), [testCharVMOne, testCharVMThree])
     }
     
     func testfilterBySeasonContains(){
-        XCTAssertEqual(filter.filterBySeason(3, charsViewModel.filteredCharViewModels), [testCharVMOne, testCharVMThree])
+        XCTAssertEqual(filter.filterBySeason(3, charsViewModel.fetchedCharactersViewModels), [testCharVMOne, testCharVMThree])
     }
     
     func testfilterBySeasonNotContains(){
-        XCTAssertTrue(filter.filterBySeason(7, charsViewModel.filteredCharViewModels).count == 0)
+        XCTAssertTrue(filter.filterBySeason(7, charsViewModel.fetchedCharactersViewModels).count == 0)
     }
     
 }
