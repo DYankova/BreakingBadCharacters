@@ -22,10 +22,10 @@
 		0AC5561423FFE8F30097E758 /* SearchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC5561323FFE8F30097E758 /* SearchButton.swift */; };
 		0AC5561623FFE9100097E758 /* SearchField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC5561523FFE90F0097E758 /* SearchField.swift */; };
 		0AC5561823FFF89E0097E758 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC5561723FFF89E0097E758 /* Constants.swift */; };
-		0AC5561A23FFF8FF0097E758 /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC5561923FFF8FF0097E758 /* CustomImageView.swift */; };
 		0AC5561E240016D40097E758 /* Fetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC5561D240016D40097E758 /* Fetcher.swift */; };
 		0AC5562824040AD80097E758 /* AllCharsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC5562724040AD70097E758 /* AllCharsViewModel.swift */; };
 		0AC5562A24053FB00097E758 /* CharsViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC5562924053FAF0097E758 /* CharsViewModelTest.swift */; };
+		0AC5562C24054E490097E758 /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC5562B24054E490097E758 /* CustomImageView.swift */; };
 		5AC32FE41C7AC141CFECEF71 /* Pods_BreakingBadCharacters.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19E69A497A45B07E53075451 /* Pods_BreakingBadCharacters.framework */; };
 /* End PBXBuildFile section */
 
@@ -58,10 +58,10 @@
 		0AC5561323FFE8F30097E758 /* SearchButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchButton.swift; sourceTree = "<group>"; };
 		0AC5561523FFE90F0097E758 /* SearchField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchField.swift; sourceTree = "<group>"; };
 		0AC5561723FFF89E0097E758 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		0AC5561923FFF8FF0097E758 /* CustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
 		0AC5561D240016D40097E758 /* Fetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fetcher.swift; sourceTree = "<group>"; };
 		0AC5562724040AD70097E758 /* AllCharsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllCharsViewModel.swift; sourceTree = "<group>"; };
 		0AC5562924053FAF0097E758 /* CharsViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharsViewModelTest.swift; sourceTree = "<group>"; };
+		0AC5562B24054E490097E758 /* CustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomImageView.swift; path = BreakingBadCharactersTests/CustomImageView.swift; sourceTree = SOURCE_ROOT; };
 		19E69A497A45B07E53075451 /* Pods_BreakingBadCharacters.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BreakingBadCharacters.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FCD868EF72091EB7F324703 /* Pods-BreakingBadCharactersTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BreakingBadCharactersTests.debug.xcconfig"; path = "Target Support Files/Pods-BreakingBadCharactersTests/Pods-BreakingBadCharactersTests.debug.xcconfig"; sourceTree = "<group>"; };
 		887302ADDBDAD4BE70408EFE /* Pods-BreakingBadCharactersTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BreakingBadCharactersTests.release.xcconfig"; path = "Target Support Files/Pods-BreakingBadCharactersTests/Pods-BreakingBadCharactersTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -187,7 +187,7 @@
 		0AC5560A23FFD2DF0097E758 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				0AC5561923FFF8FF0097E758 /* CustomImageView.swift */,
+				0AC5562B24054E490097E758 /* CustomImageView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -383,12 +383,12 @@
 				0AC555E823FFD0A40097E758 /* CharactersListViewController.swift in Sources */,
 				0AC5560E23FFE7720097E758 /* CharacterModel.swift in Sources */,
 				0AC555E423FFD0A40097E758 /* AppDelegate.swift in Sources */,
+				0AC5562C24054E490097E758 /* CustomImageView.swift in Sources */,
 				0AC5561223FFE8E40097E758 /* CharacterCell.swift in Sources */,
 				0AC555E623FFD0A40097E758 /* SceneDelegate.swift in Sources */,
 				0AC5561E240016D40097E758 /* Fetcher.swift in Sources */,
 				0AC5561823FFF89E0097E758 /* Constants.swift in Sources */,
 				0AC5561623FFE9100097E758 /* SearchField.swift in Sources */,
-				0AC5561A23FFF8FF0097E758 /* CustomImageView.swift in Sources */,
 				0AC5561023FFE8CB0097E758 /* CharacterViewModel.swift in Sources */,
 				0AC5560C23FFE2C60097E758 /* DetailsViewController.swift in Sources */,
 				0AC5562824040AD80097E758 /* AllCharsViewModel.swift in Sources */,

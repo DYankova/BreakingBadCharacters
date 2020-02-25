@@ -94,8 +94,8 @@
             filePath = "BreakingBadCharacters/Services/Fetcher.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
             landmarkName = "fetchAllCharacters(completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -110,8 +110,8 @@
             filePath = "BreakingBadCharacters/Services/Fetcher.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
             landmarkName = "fetchAllCharacters(completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -231,54 +231,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "CD27506F-E135-4F33-8958-29148B31183C"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BreakingBadCharacters/Services/Fetcher.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
-            landmarkName = "getImages()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "CD27506F-E135-4F33-8958-29148B31183C - d39265d163a477cf"
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "BreakingBadCharacters.Fetcher.getImages() -&gt; ()"
-                  moduleName = "BreakingBadCharacters"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/didi/projects/BreakingBadCharacters/BreakingBadCharacters/Services/Fetcher.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "49"
-                  endingLineNumber = "49"
-                  offsetFromSymbolStart = "28">
-               </Location>
-               <Location
-                  uuid = "CD27506F-E135-4F33-8958-29148B31183C - 3dacb8175fe50f6f"
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (BreakingBadCharacters.CharacterViewModel) -&gt; () in BreakingBadCharacters.Fetcher.getImages() -&gt; ()"
-                  moduleName = "BreakingBadCharacters"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/didi/projects/BreakingBadCharacters/BreakingBadCharacters/Services/Fetcher.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "49"
-                  endingLineNumber = "49"
-                  offsetFromSymbolStart = "22">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "269F1CE9-6F65-4B81-AF5F-8D5655DE82A0"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -303,22 +255,8 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "129"
-            endingLineNumber = "129">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "39493535-4E57-45E3-A1BC-07C5B51A2ACE"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BreakingBadCharacters/Services/Fetcher.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
-            landmarkName = "fetchAllCharacters(completion:)"
+            endingLineNumber = "129"
+            landmarkName = "close()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -668,8 +606,8 @@
             filePath = "BreakingBadCharactersTests/CharacterViewModelTests.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
             landmarkName = "testGetSeasonsCorrect()"
             landmarkType = "7">
          </BreakpointContent>
@@ -684,8 +622,8 @@
             filePath = "BreakingBadCharactersTests/CharsViewModelTest.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
             landmarkName = "testfilterByNameNotContains()"
             landmarkType = "7">
          </BreakpointContent>
