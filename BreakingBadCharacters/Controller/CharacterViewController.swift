@@ -9,7 +9,7 @@
 import UIKit
 import SnapKit
 
-class DetailsViewController: UIViewController {
+class CharacterViewController: UIViewController {
     
     var characterViewModel: CharacterViewModel!
     

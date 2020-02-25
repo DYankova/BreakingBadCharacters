@@ -11,7 +11,7 @@ import SnapKit
 
 class CharactersListViewController: UIViewController {
 
-    let charsViewModel = AllCharsViewModel()
+    let charsViewModel = AllCharactersViewModel()
     
     lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -105,13 +105,13 @@ class CharactersListViewController: UIViewController {
 extension CharactersListViewController:  UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return charsViewModel.currentCharViewModels.count
+        return charsViewModel.filteredCharViewModels.count
     }
     
    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CharacterCell", for: indexPath) as! CharacterCell
-        cell.textLabel.text = charsViewModel.currentCharViewModels[indexPath.item].name
-        cell.imageView.image = charsViewModel.currentCharViewModels[indexPath.item].imageView.image
+        cell.textLabel.text = charsViewModel.filteredCharViewModels[indexPath.item].name
+        cell.imageView.image = charsViewModel.filteredCharViewModels[indexPath.item].imageView.image
         return cell
     }
     
@@ -123,8 +123,8 @@ extension CharactersListViewController:  UICollectionViewDelegate, UICollectionV
    }
            
    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let currentItemViewModel =  charsViewModel.currentCharViewModels[indexPath.item]
-        let detailsViewController =  DetailsViewController()
+        let currentItemViewModel =  charsViewModel.filteredCharViewModels[indexPath.item]
+        let detailsViewController =  CharacterViewController()
         detailsViewController.characterViewModel = currentItemViewModel
         detailsViewController.modalPresentationStyle = .fullScreen
         self.present(detailsViewController, animated: true, completion: nil)

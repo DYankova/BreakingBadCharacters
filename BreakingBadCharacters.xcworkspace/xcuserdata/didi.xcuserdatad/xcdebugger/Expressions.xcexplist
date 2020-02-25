@@ -3,10 +3,57 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "CharsViewModelTest.testfilterByNameNotContains():CharsViewModelTest.swift">
+         contextName = "closure #1 in CharacterViewModel.setImage(url:):CharacterViewModel.swift">
          <PersistentStrings>
             <PersistentString
-               value = "charsViewModel.currentCharViewModels">
+               value = "self.imageView.image">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "CharactersListViewController.search():CharactersListViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "characters">
+            </PersistentString>
+            <PersistentString
+               value = "characters.filter{$0.name.lowercased().contains(name!.lowercased())}">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in Fetcher.fetchAllRooms(completion:):Fetcher.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "response.result">
+            </PersistentString>
+            <PersistentString
+               value = "response.result.value as? [[String: Any]] ">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "CharactersListViewController.setImage():CharactersListViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "CharacterViewModel.init(_:):CharacterViewModel.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "model.imageUrl">
+            </PersistentString>
+            <PersistentString
+               value = "URL(string: model.imageUrl)!">
+            </PersistentString>
+            <PersistentString
+               value = "imageUrl">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "CharactersListViewController.collectionView(_:numberOfItemsInSection:):CharactersListViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "filteredCharactersViewModel">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -27,79 +74,6 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "closure #1 in Fetcher.fetchAllcharacters(completion:):Fetcher.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "charModel">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "closure #1 in CharacterViewModel.setImage(url:):CharacterViewModel.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "self.imageView.image">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "CharactersListViewController.collectionView(_:numberOfItemsInSection:):CharactersListViewController.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "charsViewModel.currentCharViewModels.count">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "CharactersListViewController.collectionView(_:cellForItemAt:):CharactersListViewController.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "fetcher.charModels[indexPath.item].imageView">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "CharactersListViewController.search():CharactersListViewController.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "characters">
-            </PersistentString>
-            <PersistentString
-               value = "characters.filter{$0.name.lowercased().contains(name!.lowercased())}">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "CharsViewModel.cleanResults():CharsViewModel.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "fetchedCharViewModels">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "closure #1 in Fetcher.fetchAllRooms(completion:):Fetcher.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "response.result">
-            </PersistentString>
-            <PersistentString
-               value = "response.result.value as? [[String: Any]] ">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "CharactersListViewController.setImage():CharactersListViewController.swift">
-      </ContextState>
-      <ContextState
-         contextName = "CustomImageView.loadImage(urlString:):CustomImageView.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "imageURL">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
          contextName = "CharsViewModel.filterByName(_:):CharsViewModel.swift">
          <PersistentStrings>
             <PersistentString
@@ -108,24 +82,10 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "CharacterViewModel.init(_:):CharacterViewModel.swift">
+         contextName = "CharsViewModelTest.testfilterByNameNotContains():CharsViewModelTest.swift">
          <PersistentStrings>
             <PersistentString
-               value = "model.imageUrl">
-            </PersistentString>
-            <PersistentString
-               value = "URL(string: model.imageUrl)!">
-            </PersistentString>
-            <PersistentString
-               value = "imageUrl">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "closure #1 in closure #1 in Fetcher.fetchAllcharacters(completion:):Fetcher.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "CharacterViewModel(CharacterModel(charModel)">
+               value = "charsViewModel.currentCharViewModels">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -138,6 +98,22 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "closure #1 in Fetcher.fetchAllcharacters(completion:):Fetcher.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "charModel">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in closure #1 in Fetcher.fetchAllcharacters(completion:):Fetcher.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "CharacterViewModel(CharacterModel(charModel)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "CharacterViewModel.setImage(url:):CharacterViewModel.swift">
          <PersistentStrings>
             <PersistentString
@@ -146,13 +122,53 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "CharacterViewModel.setImage():CharacterViewModel.swift">
-      </ContextState>
-      <ContextState
          contextName = "CharacterViewModelTests.testGetSeasons():CharacterViewModelTests.swift">
          <PersistentStrings>
             <PersistentString
                value = "characterViewModel.getSeasons()">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in AllCharactersViewModel.fetchData(completion:):AllCharactersViewModel.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.filteredCharactersViewModel.filteredCharViewModels">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "CharactersListViewController.collectionView(_:cellForItemAt:):CharactersListViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "fetcher.charModels[indexPath.item].imageView">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "CharsViewModel.cleanResults():CharsViewModel.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "fetchedCharViewModels">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "CharacterViewModel.setImage():CharacterViewModel.swift">
+      </ContextState>
+      <ContextState
+         contextName = "AllCharactersViewModel.searchCharacters(_:_:):AllCharactersViewModel.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "filteredCharViewModels">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "CustomImageView.loadImage(urlString:):CustomImageView.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "imageURL">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

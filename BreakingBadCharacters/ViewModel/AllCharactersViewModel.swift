@@ -8,42 +8,33 @@
 
 import UIKit
 
-class AllCharsViewModel {
+class AllCharactersViewModel {
 
     let fetcher = Fetcher()
+    let filter = Filter()
+    
     var fetchedCharViewModels =  [CharacterViewModel]()
-    var currentCharViewModels =  [CharacterViewModel]()
+    var filteredCharViewModels =  [CharacterViewModel]()
      
     func fetchData(completion: @escaping () -> Void) {
          fetcher.fetchAllCharacters { (fetchedCharViewModels) in
             self.fetchedCharViewModels = fetchedCharViewModels ?? []
             completion()
-            self.currentCharViewModels = self.fetchedCharViewModels
+            self.filteredCharViewModels = self.fetchedCharViewModels
        }
     }
     
     func searchCharacters(_ name: String, _ seasonText: String){
-        cleanResults()
+        filteredCharViewModels = filter.cleanResults(filteredCharViewModels, fetchedCharViewModels)
         let season = Int(seasonText) ?? 0
             
         if name != "" {
-            filterByName(name)
+           filteredCharViewModels = filter.filterByName(name, filteredCharViewModels )
         }
-        if seasonText != "" {
-           filterBySeason(season)
-        }
-    }
-         
-    func filterByName(_ name: String){
-        currentCharViewModels = currentCharViewModels.filter { $0.name.lowercased().contains(name.lowercased())}
-    }
-    
-    func filterBySeason(_ season: Int){
-        currentCharViewModels = currentCharViewModels.filter{ $0.seasons.contains(season)}
-    }
         
-    private func cleanResults(){
-        currentCharViewModels = fetchedCharViewModels
+        if seasonText != "" {
+          filteredCharViewModels =  filter.filterBySeason(season, filteredCharViewModels)
+        }
     }
         
 }

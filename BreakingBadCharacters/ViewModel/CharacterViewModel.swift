@@ -10,7 +10,7 @@ import UIKit
 import AlamofireImage
 import Alamofire
 
-struct CharacterViewModel : Equatable {
+class CharacterViewModel : Equatable {
    
     let model: CharacterModel
     var imageView = CustomImageView()
