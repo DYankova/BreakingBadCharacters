@@ -11,7 +11,7 @@ import SnapKit
 
 class CharactersListViewController: UIViewController {
 
-    let charsViewModel = AllCharactersViewModel()
+    let allCharacterViewModel = AllCharactersViewModel()
     
     lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -33,7 +33,7 @@ class CharactersListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.charsViewModel.fetchData { () in
+        self.allCharacterViewModel.fetchData { () in
             self.collectionView.reloadData()
         }
       
@@ -96,7 +96,7 @@ class CharactersListViewController: UIViewController {
     @objc private func search(){
         guard let name = searchByNameField.text else { return }
         guard let seasonText = searchBySeasonField.text else { return }
-        charsViewModel.searchCharacters(name, seasonText)
+        allCharacterViewModel.searchCharacters(name, seasonText)
         
         self.collectionView.reloadData()
     }
@@ -105,13 +105,13 @@ class CharactersListViewController: UIViewController {
 extension CharactersListViewController:  UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return charsViewModel.filteredCharactersViewModels.count
+        return allCharacterViewModel.filteredCharactersViewModels.count
     }
     
    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CharacterCell", for: indexPath) as! CharacterCell
-        cell.textLabel.text = charsViewModel.filteredCharactersViewModels[indexPath.item].name
-        cell.imageView.image = charsViewModel.filteredCharactersViewModels[indexPath.item].imageView.image
+        cell.textLabel.text = allCharacterViewModel.filteredCharactersViewModels[indexPath.item].name
+        cell.imageView.image = allCharacterViewModel.filteredCharactersViewModels[indexPath.item].imageView.image
         return cell
     }
     
@@ -123,7 +123,7 @@ extension CharactersListViewController:  UICollectionViewDelegate, UICollectionV
    }
            
    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let currentItemViewModel =  charsViewModel.filteredCharactersViewModels[indexPath.item]
+        let currentItemViewModel =  allCharacterViewModel.filteredCharactersViewModels[indexPath.item]
         let detailsViewController =  CharacterViewController()
         detailsViewController.characterViewModel = currentItemViewModel
         detailsViewController.modalPresentationStyle = .fullScreen

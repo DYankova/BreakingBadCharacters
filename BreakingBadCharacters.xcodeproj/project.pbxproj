@@ -25,8 +25,8 @@
 		0AC5561E240016D40097E758 /* Fetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC5561D240016D40097E758 /* Fetcher.swift */; };
 		0AC5562824040AD80097E758 /* AllCharactersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC5562724040AD70097E758 /* AllCharactersViewModel.swift */; };
 		0AC5562A24053FB00097E758 /* CharsViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC5562924053FAF0097E758 /* CharsViewModelTest.swift */; };
-		0AC5562C24054E490097E758 /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC5562B24054E490097E758 /* CustomImageView.swift */; };
 		0AC55630240563810097E758 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC5562F240563810097E758 /* Filter.swift */; };
+		0AC55635240577B70097E758 /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC55634240577B70097E758 /* CustomImageView.swift */; };
 		5AC32FE41C7AC141CFECEF71 /* Pods_BreakingBadCharacters.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19E69A497A45B07E53075451 /* Pods_BreakingBadCharacters.framework */; };
 /* End PBXBuildFile section */
 
@@ -62,8 +62,8 @@
 		0AC5561D240016D40097E758 /* Fetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fetcher.swift; sourceTree = "<group>"; };
 		0AC5562724040AD70097E758 /* AllCharactersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllCharactersViewModel.swift; sourceTree = "<group>"; };
 		0AC5562924053FAF0097E758 /* CharsViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharsViewModelTest.swift; sourceTree = "<group>"; };
-		0AC5562B24054E490097E758 /* CustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomImageView.swift; path = BreakingBadCharactersTests/CustomImageView.swift; sourceTree = SOURCE_ROOT; };
 		0AC5562F240563810097E758 /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
+		0AC55634240577B70097E758 /* CustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
 		19E69A497A45B07E53075451 /* Pods_BreakingBadCharacters.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BreakingBadCharacters.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FCD868EF72091EB7F324703 /* Pods-BreakingBadCharactersTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BreakingBadCharactersTests.debug.xcconfig"; path = "Target Support Files/Pods-BreakingBadCharactersTests/Pods-BreakingBadCharactersTests.debug.xcconfig"; sourceTree = "<group>"; };
 		887302ADDBDAD4BE70408EFE /* Pods-BreakingBadCharactersTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BreakingBadCharactersTests.release.xcconfig"; path = "Target Support Files/Pods-BreakingBadCharactersTests/Pods-BreakingBadCharactersTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -119,7 +119,7 @@
 				0AC5560723FFD1BF0097E758 /* ViewModel */,
 				0AC5560623FFD1B70097E758 /* Controller */,
 				0AC5560523FFD1B00097E758 /* View */,
-				0AC5560A23FFD2DF0097E758 /* Extensions */,
+				0AC556332405779E0097E758 /* Extensions */,
 				0AC5560923FFD2D90097E758 /* Services */,
 				0AC555E523FFD0A40097E758 /* SceneDelegate.swift */,
 				0AC555E323FFD0A40097E758 /* AppDelegate.swift */,
@@ -187,10 +187,10 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
-		0AC5560A23FFD2DF0097E758 /* Extensions */ = {
+		0AC556332405779E0097E758 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				0AC5562B24054E490097E758 /* CustomImageView.swift */,
+				0AC55634240577B70097E758 /* CustomImageView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -386,7 +386,7 @@
 				0AC555E823FFD0A40097E758 /* CharactersListViewController.swift in Sources */,
 				0AC5560E23FFE7720097E758 /* CharacterModel.swift in Sources */,
 				0AC555E423FFD0A40097E758 /* AppDelegate.swift in Sources */,
-				0AC5562C24054E490097E758 /* CustomImageView.swift in Sources */,
+				0AC55635240577B70097E758 /* CustomImageView.swift in Sources */,
 				0AC5561223FFE8E40097E758 /* CharacterCell.swift in Sources */,
 				0AC555E623FFD0A40097E758 /* SceneDelegate.swift in Sources */,
 				0AC5561E240016D40097E758 /* Fetcher.swift in Sources */,

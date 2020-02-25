@@ -29,7 +29,7 @@ class AllCharactersViewModel {
         let season = Int(seasonText) ?? 0
             
         if name != "" {
-           filteredCharactersViewModels = filter.filterByName(name, filteredCharactersViewModels )
+           filteredCharactersViewModels = filter.filterByName(name, filteredCharactersViewModels)
         }
         
         if seasonText != "" {

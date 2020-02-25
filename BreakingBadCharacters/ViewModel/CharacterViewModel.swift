@@ -47,13 +47,13 @@ class CharacterViewModel : Equatable {
     var seasons: [Int] {
        return model.seasons
     }
-   //test
+    
     func getSeasons() -> String {
       return "Seasons: \(seasons.map{ String($0) })"
     }
     
     static func == (lhs: CharacterViewModel, rhs: CharacterViewModel) -> Bool {
-          return lhs.name == rhs.name
+        return lhs.name == rhs.name
      }
      
 }

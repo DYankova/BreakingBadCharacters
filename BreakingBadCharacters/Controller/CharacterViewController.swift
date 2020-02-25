@@ -18,30 +18,15 @@ class CharacterViewController: UIViewController {
         return iv
     }()
             
-    lazy var nameLabel: UILabel = {
-        let label = UILabel()
-        return label
-    }()
+    lazy var nameLabel = UILabel()
       
-    lazy var occupationLabel: UILabel = {
-        let label = UILabel()
-        return label
-    }()
+    lazy var occupationLabel = UILabel()
     
-    lazy var statusLabel: UILabel = {
-        let label = UILabel()
-        return label
-    }()
+    lazy var statusLabel = UILabel()
     
-    lazy var nicknameLabel: UILabel = {
-        let label = UILabel()
-        return label
-    }()
+    lazy var nicknameLabel = UILabel()
     
-    lazy var seasonsLabel: UILabel = {
-        let label = UILabel()
-        return label
-    }()
+    lazy var seasonsLabel = UILabel()
         
     lazy var closeButton: UIButton = {
         let btn = UIButton()
@@ -63,6 +48,7 @@ class CharacterViewController: UIViewController {
           
     private func setupViews(){
         view.backgroundColor = Constants.backgroundColor
+        
         imageView.image = characterViewModel.imageView.image
         nameLabel.text = characterViewModel.nameOfCharacter
         occupationLabel.text = characterViewModel.occupation
@@ -83,7 +69,7 @@ class CharacterViewController: UIViewController {
 
     private func addConstraints(){
         closeButton.snp.makeConstraints { make in
-            make.leading.top.equalToSuperview().offset(Constants.cellHeight)
+            make.top.leading.equalToSuperview().offset(Constants.cellHeight)
             make.height.width.equalTo(Constants.padding)
         }
         
@@ -128,4 +114,5 @@ class CharacterViewController: UIViewController {
     @objc private func close() {
         self.dismiss(animated: true, completion: nil)
     }
+    
 }
