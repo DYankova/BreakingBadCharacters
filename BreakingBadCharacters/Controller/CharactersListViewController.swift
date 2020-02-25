@@ -105,13 +105,13 @@ class CharactersListViewController: UIViewController {
 extension CharactersListViewController:  UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return charsViewModel.filteredCharViewModels.count
+        return charsViewModel.filteredCharactersViewModels.count
     }
     
    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CharacterCell", for: indexPath) as! CharacterCell
-        cell.textLabel.text = charsViewModel.filteredCharViewModels[indexPath.item].name
-        cell.imageView.image = charsViewModel.filteredCharViewModels[indexPath.item].imageView.image
+        cell.textLabel.text = charsViewModel.filteredCharactersViewModels[indexPath.item].name
+        cell.imageView.image = charsViewModel.filteredCharactersViewModels[indexPath.item].imageView.image
         return cell
     }
     
@@ -123,7 +123,7 @@ extension CharactersListViewController:  UICollectionViewDelegate, UICollectionV
    }
            
    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let currentItemViewModel =  charsViewModel.filteredCharViewModels[indexPath.item]
+        let currentItemViewModel =  charsViewModel.filteredCharactersViewModels[indexPath.item]
         let detailsViewController =  CharacterViewController()
         detailsViewController.characterViewModel = currentItemViewModel
         detailsViewController.modalPresentationStyle = .fullScreen
