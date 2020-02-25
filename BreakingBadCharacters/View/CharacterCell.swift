@@ -31,7 +31,6 @@ class CharacterCell:  UICollectionViewCell {
     lazy var textLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont(name: "Robonto", size: 20)
-        label.textColor = Constants.darkGray
         return label
     }()
 

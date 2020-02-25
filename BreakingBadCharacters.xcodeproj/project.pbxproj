@@ -14,7 +14,7 @@
 		0AC555EB23FFD0A40097E758 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AC555E923FFD0A40097E758 /* Main.storyboard */; };
 		0AC555ED23FFD0B70097E758 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AC555EC23FFD0B70097E758 /* Assets.xcassets */; };
 		0AC555F023FFD0B70097E758 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AC555EE23FFD0B70097E758 /* LaunchScreen.storyboard */; };
-		0AC555FB23FFD0B80097E758 /* BreakingBadCharactersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC555FA23FFD0B80097E758 /* BreakingBadCharactersTests.swift */; };
+		0AC555FB23FFD0B80097E758 /* CharacterViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC555FA23FFD0B80097E758 /* CharacterViewModelTests.swift */; };
 		0AC5560C23FFE2C60097E758 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC5560B23FFE2C60097E758 /* DetailsViewController.swift */; };
 		0AC5560E23FFE7720097E758 /* CharacterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC5560D23FFE7720097E758 /* CharacterModel.swift */; };
 		0AC5561023FFE8CB0097E758 /* CharacterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC5560F23FFE8CB0097E758 /* CharacterViewModel.swift */; };
@@ -25,6 +25,7 @@
 		0AC5561A23FFF8FF0097E758 /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC5561923FFF8FF0097E758 /* CustomImageView.swift */; };
 		0AC5561E240016D40097E758 /* Fetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC5561D240016D40097E758 /* Fetcher.swift */; };
 		0AC5562824040AD80097E758 /* CharsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC5562724040AD70097E758 /* CharsViewModel.swift */; };
+		0AC5562A24053FB00097E758 /* CharsViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC5562924053FAF0097E758 /* CharsViewModelTest.swift */; };
 		5AC32FE41C7AC141CFECEF71 /* Pods_BreakingBadCharacters.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19E69A497A45B07E53075451 /* Pods_BreakingBadCharacters.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,7 +49,7 @@
 		0AC555EF23FFD0B70097E758 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0AC555F123FFD0B70097E758 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0AC555F623FFD0B80097E758 /* BreakingBadCharactersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BreakingBadCharactersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0AC555FA23FFD0B80097E758 /* BreakingBadCharactersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakingBadCharactersTests.swift; sourceTree = "<group>"; };
+		0AC555FA23FFD0B80097E758 /* CharacterViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterViewModelTests.swift; sourceTree = "<group>"; };
 		0AC555FC23FFD0B80097E758 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0AC5560B23FFE2C60097E758 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		0AC5560D23FFE7720097E758 /* CharacterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterModel.swift; sourceTree = "<group>"; };
@@ -60,6 +61,7 @@
 		0AC5561923FFF8FF0097E758 /* CustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
 		0AC5561D240016D40097E758 /* Fetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fetcher.swift; sourceTree = "<group>"; };
 		0AC5562724040AD70097E758 /* CharsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharsViewModel.swift; sourceTree = "<group>"; };
+		0AC5562924053FAF0097E758 /* CharsViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharsViewModelTest.swift; sourceTree = "<group>"; };
 		19E69A497A45B07E53075451 /* Pods_BreakingBadCharacters.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BreakingBadCharacters.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FCD868EF72091EB7F324703 /* Pods-BreakingBadCharactersTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BreakingBadCharactersTests.debug.xcconfig"; path = "Target Support Files/Pods-BreakingBadCharactersTests/Pods-BreakingBadCharactersTests.debug.xcconfig"; sourceTree = "<group>"; };
 		887302ADDBDAD4BE70408EFE /* Pods-BreakingBadCharactersTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BreakingBadCharactersTests.release.xcconfig"; path = "Target Support Files/Pods-BreakingBadCharactersTests/Pods-BreakingBadCharactersTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -130,7 +132,8 @@
 		0AC555F923FFD0B80097E758 /* BreakingBadCharactersTests */ = {
 			isa = PBXGroup;
 			children = (
-				0AC555FA23FFD0B80097E758 /* BreakingBadCharactersTests.swift */,
+				0AC555FA23FFD0B80097E758 /* CharacterViewModelTests.swift */,
+				0AC5562924053FAF0097E758 /* CharsViewModelTest.swift */,
 				0AC555FC23FFD0B80097E758 /* Info.plist */,
 			);
 			path = BreakingBadCharactersTests;
@@ -397,7 +400,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0AC555FB23FFD0B80097E758 /* BreakingBadCharactersTests.swift in Sources */,
+				0AC5562A24053FB00097E758 /* CharsViewModelTest.swift in Sources */,
+				0AC555FB23FFD0B80097E758 /* CharacterViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

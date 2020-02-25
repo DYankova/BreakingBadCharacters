@@ -140,5 +140,13 @@
       <ContextState
          contextName = "CharacterViewModel.setImage():CharacterViewModel.swift">
       </ContextState>
+      <ContextState
+         contextName = "CharacterViewModelTests.testGetSeasons():CharacterViewModelTests.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "characterViewModel.getSeasons()">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
    </ContextStates>
 </VariablesViewState>

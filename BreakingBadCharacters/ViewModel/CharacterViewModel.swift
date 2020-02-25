@@ -45,7 +45,7 @@ struct CharacterViewModel {
     var seasons: [Int] {
        return model.seasons
     }
-   
+   //test
     func getSeasons() -> String {
       return "Seasons: \(seasons.map{ String($0) })"
     }
