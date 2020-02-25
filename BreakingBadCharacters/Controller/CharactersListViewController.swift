@@ -12,11 +12,9 @@ import SnapKit
 class CharactersListViewController: UIViewController {
 
     let charsViewModel = CharsViewModel()
-//    var characters = [CharacterViewModel]()
     
     lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .vertical
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
         return cv
     }()
@@ -36,11 +34,11 @@ class CharactersListViewController: UIViewController {
         super.viewDidLoad()
         
         self.charsViewModel.fetchData { () in
-//            self.characters = self.charsViewModel.charViewModels
             self.collectionView.reloadData()
         }
       
         view.backgroundColor = Constants.backgroundColor
+        
         addViews()
         setupCV()
         addConstraints()
@@ -74,38 +72,36 @@ class CharactersListViewController: UIViewController {
         }
         
         searchBySeasonField.snp.makeConstraints { make in
-            make.trailing.equalTo(searchButton.snp.leading).offset(-Constants.paddingSmall)
             make.top.equalTo(searchButton.snp.top)
+            make.trailing.equalTo(searchButton.snp.leading).offset(-Constants.paddingSmall)
             make.height.equalTo(Constants.cellHeight)
             make.width.equalTo(Constants.searchWidth)
         }
         
         searchByNameField.snp.makeConstraints { make in
-            make.leading.equalTo(view.snp.leading).offset(Constants.padding)
             make.top.equalTo(searchButton.snp.top)
+            make.leading.equalTo(view.snp.leading).offset(Constants.padding)
             make.trailing.equalTo(searchBySeasonField.snp.leading).offset(-Constants.paddingSmall)
             make.height.equalTo(Constants.cellHeight)
         }
      
         collectionView.snp.makeConstraints { make in
-            make.leading.equalTo(view.snp.leading)
             make.top.equalTo(searchButton.snp.bottom).offset(Constants.padding)
+            make.leading.equalTo(view.snp.leading)
             make.trailing.equalTo(view.snp.trailing)
             make.bottom.equalTo(view.snp.bottom)
         }
     }
-            //test
-            //move to VM
+         
     @objc private func search(){
-
-        guard let name = searchByNameField.text else { return  }
-        guard let seasonText = searchBySeasonField.text else { return  }
+        guard let name = searchByNameField.text else { return }
+        guard let seasonText = searchBySeasonField.text else { return }
         charsViewModel.searchCharacters(name, seasonText)
         
-         self.collectionView.reloadData()
-
+        self.collectionView.reloadData()
     }
 }
+
 extension CharactersListViewController:  UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

@@ -20,32 +20,26 @@ class DetailsViewController: UIViewController {
             
     lazy var nameLabel: UILabel = {
         let label = UILabel()
-        label.textColor = Constants.darkGray
         return label
     }()
       
     lazy var occupationLabel: UILabel = {
         let label = UILabel()
-        label.textColor = Constants.darkGray
         return label
     }()
     
     lazy var statusLabel: UILabel = {
         let label = UILabel()
-        label.textColor = Constants.darkGray
         return label
     }()
     
     lazy var nicknameLabel: UILabel = {
         let label = UILabel()
-        label.textColor = Constants.darkGray
-
         return label
     }()
     
     lazy var seasonsLabel: UILabel = {
         let label = UILabel()
-        label.textColor = Constants.darkGray
         return label
     }()
         
@@ -94,39 +88,39 @@ class DetailsViewController: UIViewController {
         }
         
         imageView.snp.makeConstraints { make in
-            make.leading.equalTo(closeButton.snp.trailing)
             make.top.equalTo(closeButton.snp.bottom).offset(Constants.padding)
+            make.leading.equalTo(closeButton.snp.trailing)
             make.height.equalTo(Constants.imageHeight)
             make.width.equalTo(Constants.imageWidth)
         }
         
         nameLabel.snp.makeConstraints { make in
-            make.leading.equalTo(imageView.snp.leading)
             make.top.equalTo(imageView.snp.bottom).offset(Constants.padding)
+            make.leading.equalTo(imageView.snp.leading)
             make.height.equalTo(Constants.padding)
         }
         
         occupationLabel.snp.makeConstraints { make in
-           make.leading.equalTo(nameLabel.snp.leading)
            make.top.equalTo(nameLabel.snp.bottom).offset(Constants.padding)
+           make.leading.equalTo(nameLabel.snp.leading)
            make.height.equalTo(Constants.padding)
         }
         
         statusLabel.snp.makeConstraints { make in
-          make.leading.equalTo(occupationLabel.snp.leading)
           make.top.equalTo(occupationLabel.snp.bottom).offset(Constants.padding)
+          make.leading.equalTo(occupationLabel.snp.leading)
           make.height.equalTo(Constants.padding)
         }
         
         nicknameLabel.snp.makeConstraints { make in
-            make.leading.equalTo(statusLabel.snp.leading)
             make.top.equalTo(statusLabel.snp.bottom).offset(Constants.padding)
+            make.leading.equalTo(statusLabel.snp.leading)
             make.height.equalTo(Constants.padding)
         }
         
         seasonsLabel.snp.makeConstraints { make in
-            make.leading.equalTo(nicknameLabel.snp.leading)
             make.top.equalTo(nicknameLabel.snp.bottom).offset(Constants.padding)
+            make.leading.equalTo(nicknameLabel.snp.leading)
             make.height.equalTo(Constants.padding)
         }
     }

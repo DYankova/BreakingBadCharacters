@@ -20,11 +20,9 @@ class CharsViewModel {
             completion()
             self.currentCharViewModels = self.fetchedCharViewModels
        }
-        
     }
     
     func searchCharacters(_ name: String, _ seasonText: String){
-        
         cleanResults()
         let season = Int(seasonText) ?? 0
             
@@ -32,22 +30,20 @@ class CharsViewModel {
             filterByName(name)
         }
         if seasonText != "" {
-             filterBySeason(season)
-         }
-
+           filterBySeason(season)
         }
+    }
         
-        func filterByName(_ name: String){
-            currentCharViewModels = currentCharViewModels.filter { $0.name.lowercased().contains(name.lowercased())}
-        }
-            
-        func filterBySeason(_ season: Int){
-            currentCharViewModels = currentCharViewModels.filter{ $0.seasons.contains(season)}
-       }
-    
-    func cleanResults(){
+    private func filterByName(_ name: String){
+        currentCharViewModels = currentCharViewModels.filter { $0.name.lowercased().contains(name.lowercased())}
+    }
+        
+    private func filterBySeason(_ season: Int){
+        currentCharViewModels = currentCharViewModels.filter{ $0.seasons.contains(season)}
+    }
+
+    private func cleanResults(){
         currentCharViewModels = fetchedCharViewModels
     }
         
-    
 }

@@ -8,11 +8,9 @@
 
 import UIKit
 import AlamofireImage
-
 import Alamofire
 
-class CharacterViewModel {
-
+struct CharacterViewModel {
     let model: CharacterModel
     var imageView = CustomImageView()
     
@@ -30,26 +28,26 @@ class CharacterViewModel {
     }
     var nameOfCharacter: String {
       "Name: \(name)"
-   }
+    }
    
-   var occupation : String {
+    var occupation : String {
       "Occupation : \(model.occupation)"
-   }
+    }
    
-   var status: String {
+    var status: String {
       "Status : \(model.status)"
-   }
+    }
    
-   var nickName: String {
+    var nickName: String {
       "Nickname : \( model.nickName)"
-   }
+    }
 
-   var seasons: [Int] {
+    var seasons: [Int] {
        return model.seasons
-   }
+    }
    
     func getSeasons() -> String {
-       return "Seasons: \(seasons.map{ String($0) })"
-   }
+      return "Seasons: \(seasons.map{ String($0) })"
+    }
   
 }

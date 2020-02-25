@@ -16,28 +16,28 @@ class Fetcher {
     
     func fetchAllCharacters(completion: @escaping ([CharacterViewModel]?) -> Void) {
        guard let url = URL(string: basicURL) else {
-         completion(nil)
-         return
-        }
+            completion(nil)
+            return
+       }
    
        Alamofire.request(url, method: .get, parameters: ["include_docs": "true"])
-        .validate()
-        .responseJSON { response in
-            guard response.result.isSuccess else {
-               completion(nil)
-               return
-            }
+            .validate()
+            .responseJSON { response in
+                guard response.result.isSuccess else {
+                    completion(nil)
+                    return
+                }
 
-            guard let values = response.result.value as? [[String: Any]] else {
-                return
+                guard let values = response.result.value as? [[String: Any]] else {
+                    return
+                }
+                
+                self.charViewModels = values.compactMap { charModel in  return CharacterViewModel(CharacterModel(charModel))}
+                self.getImages()
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                    completion(self.charViewModels)
+                }
             }
-            
-            self.charViewModels = values.compactMap { charModel in  return CharacterViewModel(CharacterModel(charModel))}
-            self.getImages()
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-                completion(self.charViewModels)
-            }
-        }
     }
 
     private func getImages(){
